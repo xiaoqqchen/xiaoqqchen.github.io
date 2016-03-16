@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    line-height: 1.8;
+}
+body{
+    background-color: #DEDEDE;
+}
+
+p{
+    margin: 0 0 10px;
+}
+
+h1,h2,h3{
+    margin: 10px 0;
+}
+
+h3{
+    color:#64605D;
+}
+
+header{
+    height: 60px;
+    width: 100%;
+    background-color: #333333;
+    background-image: url(../image/logo.jpg);
+    background-repeat: no-repeat;
+    background-position: 40px 10px;
+}
+
+nav{
+    float: right;
+}
+
+nav li{
+    float: left;
+    margin-right: 24px;
+    line-height: 60px;
+}
+
+nav li a{
+    color: #ECE8E5;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    color: #959597;
+}
+
+main{
+    width: 1240px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+article{
+    margin-bottom: 18px;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-bottom-style: outset;
+    border-right-style: outset;
+}
+
+article p{
+    margin: 0 0 10px;
+    text-indent: 30px;
+}
+
+
+article ul,ol{
+    margin-left: 40px;
+}
+
+article ul li{
+    list-style: none;
+}
+
+
+figure{
+    margin: 0 0 20px 60px;
+    width: 350px;
+    border: solid 1px #999;
+    padding: 10px;
+}
+figcaption{
+    margin: 5px 0 10px;
+    text-align: center;
+}
+
+article table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+article table th{
+    background-color: #333333;
+    color: #fff;
+    padding: 4px;
+    border: solid 1px #CCCCCC;
+    text-align: left;
+}
+
+article table td{
+    padding: 4px;
+    border: solid 1px #CCCCCC;
+}
+
+article table tr:last-child{
+    padding: 2px;
+    border: solid 1px #CCCCCC;
+    background-color: #CCCCCC;
+    font-weight: bold;
+}
+
+aside{
+    margin-bottom: 18px;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-bottom-style: outset;
+    border-right-style: outset;
+}
+
+aside h2{
+    border-left: 4px solid #CCCCCC;
+    line-height: 40px;
+    padding-left: 10px;
+}
+
+aside label{
+    width: 30%;
+    display: inline-block;
+    text-align: right;
+}
+
+aside .hint{
+    margin-left: 30%;
+}
+
+footer{
+    background-color: #000;
+    height: 70px;
+    margin: 0;
+}
+footer p{
+    color:#fff;
+    line-height: 70px;
+    text-align: center;
+    margin: 0px;
+}
+
+.author{
+    text-indent: 0;
+    color: #666;
+}
