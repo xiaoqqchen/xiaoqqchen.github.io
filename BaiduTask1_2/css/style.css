@@ -1,15 +1,17 @@
 *{
-    margin: 0;
-    padding: 0;
-
-    line-height: 1.8;
+/*    margin: 0;
+    padding: 0;*/
 }
 body{
     background-color: #DEDEDE;
+    font-family: "Microsoft Yahei";
+    margin: 0;
+    padding: 0;
 }
 
 p{
     margin: 0 0 10px;
+    line-height: 1.8;
 }
 
 h1,h2,h3{
@@ -33,6 +35,10 @@ nav{
     float: right;
 }
 
+nav ul{
+    margin: 0;
+}
+
 nav li{
     float: left;
     margin-right: 24px;
@@ -50,13 +56,13 @@ nav li a:hover{
 }
 
 main{
-    width: 1240px;
+    max-width: 1240px;
     margin: 0 auto;
     margin-top: 20px;
 }
 
 article{
-    margin-bottom: 18px;
+    margin:0 30px 18px;
     background-color: #fff;
     padding: 30px 20px;
     border-bottom-style: outset;
@@ -80,7 +86,7 @@ article ul li{
 
 figure{
     margin: 0 0 20px 60px;
-    width: 350px;
+    width: 250px;
     border: solid 1px #999;
     padding: 10px;
 }
@@ -89,6 +95,9 @@ figcaption{
     text-align: center;
 }
 
+figure img{
+    width: 250px;
+}
 article table{
     width: 100%;
     border-collapse: collapse;
@@ -115,27 +124,55 @@ article table tr:last-child{
 }
 
 aside{
-    margin-bottom: 18px;
+    margin:0 40px 18px 30px;
     background-color: #fff;
     padding: 30px 20px;
     border-bottom-style: outset;
     border-right-style: outset;
 }
 
-aside h2{
+aside h3{
     border-left: 4px solid #CCCCCC;
     line-height: 40px;
     padding-left: 10px;
+    color: #000;
 }
 
-aside label{
+aside textarea{
+    vertical-align:text-top;
+    width: 55%;
+    height: 100px;
+}
+
+aside .title{
     width: 30%;
     display: inline-block;
     text-align: right;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
 aside .hint{
-    margin-left: 30%;
+    margin: 12px 0;
+    font-size: 8px;
+    color:#999;
+}
+
+aside .form-group{
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+aside .btn-submit{
+    width: 100%;
+    margin: 10px;
+    padding:5px 10px;
+    background-color: #35d;
+    font-size: 16px;
+    line-height: 30px;
+    border-radius: 10px;
+    font-family: "Microsoft Yahei";
+    color: #fff;
 }
 
 footer{
@@ -147,7 +184,8 @@ footer p{
     color:#fff;
     line-height: 70px;
     text-align: center;
-    margin: 0px;
+    margin: 0;
+    font-weight: bold;
 }
 
 .author{
