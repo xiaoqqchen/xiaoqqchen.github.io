@@ -125,16 +125,17 @@ article table tr:last-child{
 }
 
 .content{
-    margin-right: 380px;
+    margin-right: 420px;
 }
 
 aside{
-    margin:0 40px 18px 30px;
+    margin:0 20px 18px 30px;
     background-color: #fff;
     padding: 30px 20px;
     border-bottom-style: outset;
     border-right-style: outset;
     float: right;
+    width: 370px;
 
 }
 
@@ -157,6 +158,7 @@ aside .title{
     text-align: right;
     margin-right: 10px;
     margin-top: 10px;
+    font-size: 14px;
 }
 
 aside .hint{
