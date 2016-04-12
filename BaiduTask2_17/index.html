@@ -3,6 +3,26 @@
 <head>
     <meta charset="utf-8">
     <title>IFE JavaScript Task 01</title>
+    <style>
+        .aqi-chart-wrap{
+            height: 600px;
+            width: 1200px;
+            position: relative;
+            background-color: #eee;
+            margin: 20px auto;
+            /*border-left: 1px #aaa solid;*/
+            border-bottom: 1px #aaa solid;
+        }
+        .aqi-chart-wrap div{
+            font-size: 0;
+            bottom:0;
+            position: absolute;
+            display: inline-block;
+            background-color: #ff0000;
+            border: 1px #eee solid;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
 <fieldset id="form-gra-time">
@@ -14,8 +34,7 @@
 
 <fieldset>
     <legend>请选择查看的城市：</legend>
-    <label for="city-select">城市：</label>
-    <select id="city-select">
+    <select id="city-select" title="城市">
         <option>北京</option>
     </select>
 </fieldset>
