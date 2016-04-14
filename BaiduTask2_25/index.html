@@ -12,40 +12,47 @@
         .control input{
             margin: 20px;
         }
-        #wapper{
+        #wrap{
+            width: 200px;
             margin: 0 auto;
             position: absolute;
         }
-        div{
+        #wrap,#wrap div{
+            flex-direction: column;
             display: flex;
             min-width: 30px;
             min-height: 25px;
             margin: 15px 5px;
-            border: 2px #000 solid;
+            border: 1px #000 solid;
             color: #000;
+            padding-left: 15px;
+            position: relative;
+            background: url("img/箭头1.png") no-repeat ;
+            background-size: 15px 15px;
+
         }
     </style>
 </head>
 <body>
 <div class="control">
     <input id="order" type="button" value="遍历"/>
-    <br/>
+
     <input id="search-text" type="text"/>
     <input id="search" type="button" value="搜索"/>
+
+    <input id="del-node" type="button" value="删除节点"/>
+    <input id="node-text" type="text"/>
+    <input id="add-node" type="button" value="增加节点"/>
+
 </div>
 
-<div id="wapper"> Supper
+<div id="wrap"> Supper
     <div>看不清
         <div>Apple
             <div>Pear</div>
             <div>Pig</div>
             <div>Cala</div>
             <div>Soccer</div>
-        </div>
-        <div>Phone</div>
-        <div>
-            <div>Book</div>
-            <div>School</div>
         </div>
     </div>
     <div>Note
