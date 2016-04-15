@@ -11,8 +11,19 @@
     <div id="control">
         <div class="title">控制面板</div>
         <div class="main">
+            <div class="PowerSystem">
+                <label>动力系统选择：</label>
+                <input type="radio" data-speed="3" data-consume="0.5" name="PowerSystem" value="PS1" checked><span>前进号（速率30px/s,能耗5%/s）</span>
+                <input type="radio" data-speed="5" data-consume="0.7" name="PowerSystem" value="PS2"><span>奔腾号（速率50px/s,能耗7%/s）</span>
+                <input type="radio" data-speed="8" data-consume="0.9" name="PowerSystem" value="PS3"><span>超越号（速率80px/s,能耗9%/s）</span>
+            </div>
+            <div class="EnergySystem">
+                <label>能源系统选择：</label>
+                <input type="radio" data-supplyRate="0.2" name="EnergySystem" value="ES1" checked><span>劲量型（补充能源速度2%/s）</span>
+                <input type="radio" data-supplyRate="0.3" name="EnergySystem" value="ES2"><span>光能型（补充能源速度3%/s）</span>
+                <input type="radio" data-supplyRate="0.4" name="EnergySystem" value="ES3"><span>永久型（补充能源速度4%/s）</span>
+            </div>
             <div data-id="0">
-
                 <input type="button" data-cmd="Create" value="创造飞船"/>
             </div>
             <div data-id=1 id="control1">
@@ -76,10 +87,12 @@
     </div>
 
 </body>
-
+<script src="./js/Util.js"></script>
+<script src="./js/Adapter.js"></script>
 <script src="./js/SpaceShip.js"></script>
+<script src="./js/SpaceShip2.js"></script>
 <script src="./js/Commander.js"></script>
 <script src="./js/Mediator.js"></script>
-<script src="./js/Util.js"></script>
+<script src="./js/BUS.js"></script>
 <script src="./js/Main.js"></script>
 </html>

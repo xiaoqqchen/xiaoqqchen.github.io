@@ -3,7 +3,8 @@
  */
 
 function Init(){
-    Mediator.Make(Commander);
+    //Mediator.Make(Commander);
+    BUS.Make(Commander);
     Commander.Init();
     Util.Animation();
 }
