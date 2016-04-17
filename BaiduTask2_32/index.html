@@ -119,6 +119,17 @@
         "rule": "非必填，请输入11位手机号码，且不能与上面手机号码相同",
         "success": "备用手机号码格式输入正确"
     },
+                    "date": {
+        "id": "date2",
+        "label": "日期",
+        "type": "text",
+        "validators": [
+            "isNotEmpty",
+            "isValidDate"
+        ],
+            "rule": "必填，例如2016-04-17",
+        "success": "日期格式输入正确"
+    },
     "submit": {
         "id": "validate2",
         "value": "验证",
@@ -143,7 +154,7 @@
         <p>"type": //表单类型，目前只支持 text/password/button,</p>
         <p>"validators"://校验规则，支持的规则有：isNotEmpty/isEmpty, isNotEqualTo/isEqualTo, isValidName, isValidPassword, isValidIdentity, isValidDate, isValidMobile, isValidEmail
             <br/>
-            注意: isNotEqualTo/isEqualTo的表单必须包含compare字段</p>
+            注意: isNotEqualTo/isEqualTo的表单必须包含compare字段，表示与哪个选项框对比</p>
     </article>
 </main>
 <script src="js/Util.js"></script>
