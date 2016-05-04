@@ -1,0 +1,2 @@
+define(["require","./Control"],function(o){var t=(o("./Control"),function(){});return t.prototype={constructor:"SortTable",test:function(){console.log(this.constructor.toString())}},t});
+//# sourceMappingURL=SortTable.js.map

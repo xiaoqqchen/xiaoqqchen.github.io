@@ -1,0 +1,1 @@
+{"version":3,"sources":["SortTable.js.src.js"],"names":["define","require","SortTable","prototype","constructor","test","console","log","this","toString"],"mappings":"AAGAA,QAAQ,UAAU,aAAa,SAASC,GACpC,GAEIC,IAFUD,EAAQ,aAEN,aAWhB,OAPAC,GAAUC,WACNC,YAAY,YACZC,KAAK,WACDC,QAAQC,IAAIC,KAAKJ,YAAYK,cAI9BP","file":"SortTable.js.map"}

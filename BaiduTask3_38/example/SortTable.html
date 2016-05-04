@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../dep/require.js"></script>
+    <script src="../dep/vars.js"></script>
+    <script src="../dep/common-2.3.js"></script>
+    <link rel="stylesheet" href="../css/main.css"/>
+</head>
+<body>
+<div id='content_left'><!--左侧最外层div-->
+    <div class="result-op" srcid="16873" id="1" mu="http://baike.baidu.com/view/1758.htm" data-op="{'y':'FD9FFD6B'}">
+
+<div class="main">
+
+</div>
+<script>
+A.init(function () {
+
+    var me = this;
+
+    require(['../src/SortTable'], function (SortTable) {
+
+        var st = new SortTable({
+            prefix: 'ecl-ui-filter',
+            main: me.qq('main'),
+            data:[],
+            header:[{name:'area',label:"站点名称"},
+                {name:'aqi',label:"AQI",sort:-1},
+                {name:'pm2_5',label:"PM25",sort:-1},
+                {name:'pm10',label:"PM10",sort:-1},
+                {name:'co',label:"CO",sort:-1},
+                {name:'no2',label:"NO2",sort:-1},
+                {name:'o3',label:"O3"}]
+        });
+
+        st.render();
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('get','./2016050100.json');
+        xhr.onreadystatechange =function(){
+            var value = JSON.parse(xhr.responseText);
+            st.fill(value);
+            st.render();
+        };
+        xhr.send();
+
+    });
+});
+
+</script>
+</body>
+</html>
