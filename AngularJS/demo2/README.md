@@ -4,7 +4,7 @@
 
 ---
 
-#1. 引言
+## 引言
 [ToDoMVC](http://todomvc.com/)是采用很多套MV* 框架来实现来实现一个固定规范的JavaScript Web App，从而方便我们对不同的框架进行学习和比较。
 
 * 框架概述：
