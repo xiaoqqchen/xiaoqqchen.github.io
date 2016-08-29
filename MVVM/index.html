@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>双向绑定测试</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script src="directive.js"></script>
+<script src="parsers.js"></script>
+<script src="compiler.js"></script>
+<script src="index.js"></script>
+
+<div id="demo">
+	{{a}} {{a}}
+	<p>{{a}}</p>
+	<p>{{a}}</p>
+	<p>{{a}}</p>
+	<p>{{a}}</p>
+	<p>{{a}}
+		<p>   {{a}}</p>
+	</p>
+</div>
+	
+<script type="text/javascript">
+	var data = {
+		a:"A",
+		b:{
+			bb:"BB"
+		}
+	};
+	var el = document.getElementById('demo');
+
+	var vue = new Vue({
+		data:data,
+		el:el
+	});
+</script>
+
+</body>
+</html>
