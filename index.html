@@ -1,46 +1,93 @@
-<!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-<ol>
-    <li><a href="./BaiduTask1_1">任务1</a></li>
-    <li><a href="./BaiduTask1_2">任务2</a></li>
-    <li><a href="./BaiduTask1_3">任务3</a></li>
-    <li><a href="./BaiduTask1_4">任务4</a></li>
-    <li><a href="./BaiduTask1_5">任务5</a></li>
-    <li><a href="./BaiduTask1_6">任务6</a>  <a href="http://7xrp04.com1.z0.glb.clouddn.com/task_1_6_2.jpg">(原稿)</a></li>
-    <li><a href="./BaiduTask1_7">任务7</a>(部分完成，吴君涵继续修改)  <a href="/BaiduTask1_7/task_1_7_2.jpg">(原稿)</a></li>
-    <li><a href="./BaiduTask1_8">任务8</a> <a href="/BaiduTask1_8/task_1_8_1.png">(原稿)</a></li>
-    <li><a href="./BaiduTask1_9">任务9</a>(未完成)</li>
-    <li><a href="./BaiduTask1_10">任务10</a></li>
-    <li><a href="./BaiduTask1_11">任务11</a>(未完成)</li>
-    <li><a href="./BaiduTask1_12">任务12</a></li>
-    <hr/>
-    <li><a href="./BaiduTask2_13">任务13</a></li>
-    <li><a href="./BaiduTask2_14">任务14</a></li>
-    <li><a href="./BaiduTask2_15">任务15</a></li>
-    <li><a href="./BaiduTask2_16">任务16</a></li>
-    <li><a href="./BaiduTask2_17">任务17</a></li>
-    <li><a href="./BaiduTask2_18">任务18</a></li>
-    <li><a href="./BaiduTask2_19">任务19</a></li>
-    <li><a href="./BaiduTask2_20">任务20</a></li>
-    <li><a href="./BaiduTask2_21">任务21</a></li>
-    <li><a href="./BaiduTask2_22">任务22</a></li>
-    <li><a href="./BaiduTask2_23">任务23</a></li>
-    <li><a href="./BaiduTask2_24">任务24</a></li>
-    <li><a href="./BaiduTask2_25">任务25</a></li>
-    <li><a href="./BaiduTask2_26">任务26</a></li>
-    <li><a href="./BaiduTask2_27">任务27</a></li>
-    <li><a href="./BaiduTask2_28">任务28</a>(未完成)</li>
-    <li><a href="./BaiduTask2_29">任务29</a></li>
-    <li><a href="./BaiduTask2_30">任务30</a></li>
-    <li><a href="./BaiduTask2_31">任务31</a>(未完成)</li>
-    <li><a href="./BaiduTask2_32">任务32</a></li>
-    <li><a href="./BaiduTask2_36">任务33-36</a></li>
-    <li><a href="./BaiduTask3_37">任务37</a></li>
-</ol>
-</body>
+    <head>
+        <title>跳转到APP</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="pragram" content="no-cache"/>
+        <meta http-equiv="cache-control" content="no-cache,must-revalidate"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="referrer" content="always"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+       <script>
+            function fontAdapt() {
+                var html = document.documentElement;
+                var windowWidth = html.clientWidth;
+                var offsetWidth = html.offsetWidth;
+                var maxWidth = Math.max(windowWidth, offsetWidth);
+                var agent = navigator.userAgent.toLowerCase(), version;
+                if (agent.indexOf("ipad") > -1) {
+                    if (agent.indexOf("like mac os x") > 0) {
+                        version = (agent.match(/os [\d._]*/gi) + "").replace(/[^0-9|_.]/ig, "").replace(/_/ig, ".");
+                        if (version && version.substring(0, 1) <= 8) {
+                            html.style.width = 540 + "px"
+                        }
+                    }
+                    maxWidth = Math.min(414, maxWidth)
+                }
+                html.style.fontSize = maxWidth / 7.5 + "px"
+            }
+            fontAdapt();
+            window.onresize = fontAdapt;
+        </script>
+    </head>
+    <body>
+        <style>
+            body {
+                font-size: .5rem;
+            }
+            input {
+                font-size: .4rem;
+            }
+        </style>
+        <div>
+            <span>花首页</span>
+            <a href="javascript:;" onclick="showWebView('https://mxfd.vip.com/center', 1)">商城APP</a>
+            <a href="javascript:;" onclick="showWebView('https://mxfd.vip.com/center', 2)">金融APP</a>
+        </div>
+        <div>
+            <span>现金贷首页</span>
+            <a href="javascript:;" onclick="showWebView('https://mxjd.vip.com/pages/v2/index', 1)">商城APP</a>
+            <a href="javascript:;" onclick="showWebView('https://mxjd.vip.com/pages/v2/index', 2)">金融APP</a>
+        </div>
+        <div>
+            <hr/>
+            跳backId:<input id="backId"/><br/>
+            <a href="javascript:;" onclick="showWebViewByBackId(1)">商城APP</a>
+            <a href="javascript:;" onclick="showWebViewByBackId(2)">金融APP</a>
+            <hr/>
+        </div>
+        <script>
+            window.showWebView = function(url, type) {
+                let webViewUrl = "";
+                if(type == 1) {
+                    webViewUrl = "vipshop://showWebview?url=" + encodeURIComponent(url)
+                }else {
+                    webViewUrl = "vipjr://showWebView?body=" + encodeURIComponent(JSON.stringify({"url": url, "isLogin":false}));
+                }
+                window.location.href = webViewUrl;
+            }
+            window.showWebViewByBackId = function(type) {
+                var backId = document.getElementById('backId').value
+                localStorage.setItem('backId', backId)
+                showWebView('https://mxfd.vip.com/publicity?backId='+backId, type);
+            }
+            if(!!localStorage.getItem('backId')) {
+                let backId =  localStorage.getItem('backId');
+                document.getElementById('backId').value = backId;
+            }else {
+                localStorage.setItem('backId', 'wbswxkd2018051602')
+                document.getElementById('backId').value = 'wbswxkd2018051602';
+            }
+        </script>
+        <div>
+            <span>p=center</span>
+            <a href="javascript:;" onclick="showWebView('https://mxfd.vip.com/mxfd?p=center', 1)">商城APP</a>
+            <a href="javascript:;" onclick="showWebView('https://mxfd.vip.com/mxfd?p=center', 2)">金融APP</a>
+        </div>
+        <div>
+            <span>publicityShortUrl_w_local</span>
+            <a href="javascript:;" onclick="showWebView('https://mxfd.vip.com/mxfd?p=publicityShortUrl_w_local', 1)">商城APP</a>
+            <a href="javascript:;" onclick="showWebView('https://mxfd.vip.com/mxfd?p=publicityShortUrl_w_local', 2)">金融APP</a>
+        </div>
+    </body>
 </html>
